@@ -1,4 +1,4 @@
-
+ 
 /**
  * Write a description of class MyPicture here.
  *
@@ -8,73 +8,105 @@
 public class MyPicture
 {
     // instance variables - replace the example below with your own
-    private Square wall;
-    private Square window;
+     private Square sky;
     private Square ground;
-    private Square sky;
-    private Triangle roof;
-    private Triangle fin;
-    private Circle sun;
+    private Circle moon;
+    private Circle star;
+    private Circle star2;
+    private Circle star3;
+    private Circle star4;
+    private Circle star5;
+    private Circle star6;
+    private Circle star7;
+    private Circle star8;
     private boolean drawn;
-
-
+    
     /**
      * Constructor for objects of class MyPicture
      */
     public MyPicture()
     {
-        wall = new Square();
-        window = new Square();
-        ground = new Square();
         sky = new Square();
-        roof = new Triangle();
-        fin = new Triangle();
-        sun = new Circle();
+        ground = new Square();
+        moon = new Circle();
+        star = new Circle();
+        star2 = new Circle();
+        star3 = new Circle();
+        star4 = new Circle();
+        star5 = new Circle();
+        star6 = new Circle();
+        star7 = new Circle();
+        star8 = new Circle();
         drawn = false;
     }
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.changeColor("red");
-            wall.makeVisible();
+            sky.moveVertical(-450);
+            sky.moveHorizontal(-400);
+            sky.changeSize(600);
+            sky.changeColor("black");
+            sky.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
+            moon.changeColor("yellow");
+            moon.moveHorizontal(100);
+            moon.moveVertical(90);
+            moon.changeSize(80);
+            moon.makeVisible();
+            
+            star.changeColor("white");
+            star.moveHorizontal(-200);
+            star.moveVertical(40);
+            star.changeSize(5);
+            star.makeVisible();
+            
+            star2.changeColor("yellow");
+            star2.moveHorizontal(100);
+            star2.moveVertical(35);
+            star2.changeSize(5);
+            star2.makeVisible();
+            
+            star3.changeColor("white");
+            star3.moveHorizontal(-20);
+            star3.moveVertical(25);
+            star3.changeSize(5);
+            star3.makeVisible();
+            
+            star4.changeColor("yellow");
+            star4.moveHorizontal(-50);
+            star4.moveVertical(90);
+            star4.changeSize(5);
+            star4.makeVisible();
+            
+            star5.changeColor("yellow");
+            star5.moveHorizontal(85);
+            star5.moveVertical(-60);
+            star5.changeSize(5);
+            star5.makeVisible();
+            
+            star6.changeColor("white");
+            star6.moveHorizontal(-90);
+            star6.moveVertical(-40);
+            star6.changeSize(5);
+            star6.makeVisible();
+            
+            star7.changeColor("yellow");
+            star7.moveHorizontal(200);
+            star7.moveVertical(10);
+            star7.changeSize(5);
+            star7.makeVisible();
+            
+            star8.changeColor("white");
+            star8.moveHorizontal(250);
+            star8.moveVertical(-50);
+            star8.changeSize(5);
+            star8.makeVisible();
             
             ground.moveVertical(120);
             ground.moveHorizontal(-320);
             ground.changeSize(600);
-            ground.changeColor("blue");
+            ground.changeColor("green");
             ground.makeVisible();
-            
-            sky.moveVertical(-120);
-            sky.moveHorizontal(220);
-            sky.changeSize(600);
-            sky.changeColor("magenta");
-            sky.makeVisible();
-    
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
-            
-            fin.changeSize(40,40);
-            fin.moveHorizontal(200);
-            fin.moveVertical(60);
-            fin.changeColor("blue");
-            fin.makeVisible();
-    
-            sun.changeColor("yellow");
-            sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
-            sun.makeVisible();
             drawn = true;
         }
     }
